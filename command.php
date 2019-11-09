@@ -205,6 +205,7 @@ if (!class_exists('WpSecCheck')) {
             $cache_file = $cache->has( $cache_key, $this->cacheTTL );
 
             if ($cache_file && $this->cached) {
+				$url = 'Cache';
                 $req = unserialize($cache->read($cache_key));
                 ++$this->cacheHitCount;
             }
